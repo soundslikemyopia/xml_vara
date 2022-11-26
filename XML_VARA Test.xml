@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<uc-export clientvers="21.0.3+build.66">
+<SCRI name="SCRI.XML.TEST">
+<XHEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<Active>1</Active>
+<OH_SubType/>
+<CustomAttributes KeyListID="0" dataRequestID="0"/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_SCRI state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<IntAccount/>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>1</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+</ATTR_SCRI>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| |</FcstStatus>
+<Ert>1</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[:P "Start"
+:Set &Counter# = 1
+:SET &VARA# = "VARA.XML.TEST"
+:SET &KEY# = "export"
+:SET &VALUE# = "/uc-export/JOBS_WINDOWS/ATTR_JOBS/Queue"
+
+:SET &HND# = PREP_PROCESS_VAR_XML(&VARA#, &KEY#, &VALUE#)
+:PROCESS &HND#
+: SET &Counter# = Format(&Counter#,"00")
+: SET &LINE# = GET_PROCESS_LINE(&HND#)
+: PRINT "&Counter#: &LINE# "
+: Set &Counter# = &Counter# + 1
+:ENDPROCESS
+
+:P "End"
+]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</SCRI>
+<VARA OVD_VRName="FREI" data_type="XML" name="VARA.XML.TEST" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>XML</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>XML</lblSource>
+<source>XML</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+<HostType/>
+</ATTR_VARA>
+<VARA state="1">
+<XML>
+<Parameters>
+<row Name="export" Value="&lt;uc-export clientvers=&quot;21.0.3+build.66&quot;&gt;&#10;    &lt;JOBS_WINDOWS AttrType=&quot;WINDOWS&quot; name=&quot;JOBS.WIN.DUMMY&quot;&gt;&#10;        &lt;XHEADER state=&quot;1&quot;&gt;&#10;            &lt;Title/&gt;&#10;            &lt;ArchiveKey1/&gt;&#10;            &lt;ArchiveKey2/&gt;&#10;            &lt;Active&gt;1&lt;/Active&gt;&#10;            &lt;OH_SubType/&gt;&#10;            &lt;CustomAttributes KeyListID=&quot;0&quot; dataRequestID=&quot;0&quot;/&gt;&#10;        &lt;/XHEADER&gt;&#10;        &lt;OUTPUTREG state=&quot;1&quot;&gt;&#10;            &lt;FileReg/&gt;&#10;        &lt;/OUTPUTREG&gt;&#10;        &lt;SYNCREF state=&quot;1&quot;&gt;&#10;            &lt;Syncs/&gt;&#10;        &lt;/SYNCREF&gt;&#10;        &lt;ATTR_JOBS state=&quot;1&quot;&gt;&#10;            &lt;Queue&gt;CLIENT_QUEUE&lt;/Queue&gt;&#10;            &lt;StartType/&gt;&#10;            &lt;HostDst&gt;|WIN01|HOST&lt;/HostDst&gt;&#10;            &lt;HostATTR_Type&gt;WINDOWS&lt;/HostATTR_Type&gt;&#10;            &lt;CodeName/&gt;&#10;            &lt;Login&gt;DEMO.LOGIN&lt;/Login&gt;&#10;            &lt;IntAccount/&gt;&#10;            &lt;ExtRepDef&gt;1&lt;/ExtRepDef&gt;&#10;            &lt;ExtRepAll&gt;0&lt;/ExtRepAll&gt;&#10;            &lt;ExtRepNone&gt;0&lt;/ExtRepNone&gt;&#10;            &lt;AutoDeactNo&gt;0&lt;/AutoDeactNo&gt;&#10;            &lt;AutoDeact1ErrorFree&gt;0&lt;/AutoDeact1ErrorFree&gt;&#10;            &lt;AutoDeactErrorFree&gt;0&lt;/AutoDeactErrorFree&gt;&#10;            &lt;DeactWhen/&gt;&#10;            &lt;DeactDelay&gt;0&lt;/DeactDelay&gt;&#10;            &lt;AutoDeactAlways&gt;1&lt;/AutoDeactAlways&gt;&#10;            &lt;AttDialog&gt;0&lt;/AttDialog&gt;&#10;            &lt;ActAtRun&gt;1&lt;/ActAtRun&gt;&#10;            &lt;Consumption&gt;0&lt;/Consumption&gt;&#10;            &lt;UC4Priority&gt;0&lt;/UC4Priority&gt;&#10;            &lt;MaxParallel2&gt;0&lt;/MaxParallel2&gt;&#10;            &lt;MpElse1&gt;1&lt;/MpElse1&gt;&#10;            &lt;MpElse2&gt;0&lt;/MpElse2&gt;&#10;            &lt;TZ/&gt;&#10;        &lt;/ATTR_JOBS&gt;&#10;        &lt;ATTR_WINDOWS state=&quot;1&quot;&gt;&#10;            &lt;OutputDb&gt;1&lt;/OutputDb&gt;&#10;            &lt;OutputDbErr&gt;0&lt;/OutputDbErr&gt;&#10;            &lt;OutputFile&gt;0&lt;/OutputFile&gt;&#10;            &lt;IsGenerated&gt;0&lt;/IsGenerated&gt;&#10;            &lt;BAT&gt;1&lt;/BAT&gt;&#10;            &lt;COM&gt;0&lt;/COM&gt;&#10;            &lt;WinBatch&gt;0&lt;/WinBatch&gt;&#10;            &lt;Standard&gt;1&lt;/Standard&gt;&#10;            &lt;Minimized&gt;0&lt;/Minimized&gt;&#10;            &lt;Maximized&gt;0&lt;/Maximized&gt;&#10;            &lt;JObjDefault&gt;1&lt;/JObjDefault&gt;&#10;            &lt;JObjYes&gt;0&lt;/JObjYes&gt;&#10;            &lt;JObjNo&gt;0&lt;/JObjNo&gt;&#10;            &lt;WorkingDirectory&gt;c:\&lt;/WorkingDirectory&gt;&#10;            &lt;Command/&gt;&#10;            &lt;LogOn&gt;0&lt;/LogOn&gt;&#10;            &lt;ShowJob&gt;0&lt;/ShowJob&gt;&#10;        &lt;/ATTR_WINDOWS&gt;&#10;        &lt;RUNTIME state=&quot;1&quot;&gt;&#10;            &lt;MaxRetCode&gt;0&lt;/MaxRetCode&gt;&#10;            &lt;MrcExecute/&gt;&#10;            &lt;MrcElseE&gt;0&lt;/MrcElseE&gt;&#10;            &lt;FcstStatus&gt;0| |&lt;/FcstStatus&gt;&#10;            &lt;Ert&gt;1&lt;/Ert&gt;&#10;            &lt;ErtMethodDef&gt;1&lt;/ErtMethodDef&gt;&#10;            &lt;ErtMethodFix&gt;0&lt;/ErtMethodFix&gt;&#10;            &lt;ErtFix&gt;0&lt;/ErtFix&gt;&#10;            &lt;ErtDynMethod&gt;2|Average&lt;/ErtDynMethod&gt;&#10;            &lt;ErtMethodDyn&gt;0&lt;/ErtMethodDyn&gt;&#10;            &lt;ErtCnt&gt;0&lt;/ErtCnt&gt;&#10;            &lt;ErtCorr&gt;0&lt;/ErtCorr&gt;&#10;            &lt;ErtIgn&gt;0&lt;/ErtIgn&gt;&#10;            &lt;ErtIgnFlg&gt;0&lt;/ErtIgnFlg&gt;&#10;            &lt;ErtMinCnt&gt;0&lt;/ErtMinCnt&gt;&#10;            &lt;MrtMethodNone&gt;1&lt;/MrtMethodNone&gt;&#10;            &lt;MrtMethodFix&gt;0&lt;/MrtMethodFix&gt;&#10;            &lt;MrtFix&gt;0&lt;/MrtFix&gt;&#10;            &lt;MrtMethodErt&gt;0&lt;/MrtMethodErt&gt;&#10;            &lt;MrtErt&gt;0&lt;/MrtErt&gt;&#10;            &lt;MrtMethodDate&gt;0&lt;/MrtMethodDate&gt;&#10;            &lt;MrtDays&gt;0&lt;/MrtDays&gt;&#10;            &lt;MrtTime&gt;00:00&lt;/MrtTime&gt;&#10;            &lt;MrtTZ/&gt;&#10;            &lt;SrtMethodNone&gt;1&lt;/SrtMethodNone&gt;&#10;            &lt;SrtMethodFix&gt;0&lt;/SrtMethodFix&gt;&#10;            &lt;SrtFix&gt;0&lt;/SrtFix&gt;&#10;            &lt;SrtMethodErt&gt;0&lt;/SrtMethodErt&gt;&#10;            &lt;SrtErt&gt;0&lt;/SrtErt&gt;&#10;            &lt;MrtCancel&gt;0&lt;/MrtCancel&gt;&#10;            &lt;MrtExecute&gt;0&lt;/MrtExecute&gt;&#10;            &lt;MrtExecuteObj/&gt;&#10;        &lt;/RUNTIME&gt;&#10;        &lt;DYNVALUES state=&quot;1&quot;&gt;&#10;            &lt;dyntree&gt;&#10;                &lt;node content=&quot;1&quot; id=&quot;VALUE&quot; name=&quot;Variables&quot; parent=&quot;&quot; type=&quot;VALUE&quot;&gt;&#10;                    &lt;VALUE state=&quot;1&quot;&gt;&#10;                        &lt;Values/&gt;&#10;                        &lt;Mode&gt;0&lt;/Mode&gt;&#10;                    &lt;/VALUE&gt;&#10;                &lt;/node&gt;&#10;            &lt;/dyntree&gt;&#10;        &lt;/DYNVALUES&gt;&#10;        &lt;ROLLBACK state=&quot;1&quot;&gt;&#10;            &lt;RollbackFlag&gt;0&lt;/RollbackFlag&gt;&#10;            &lt;CBackupObj/&gt;&#10;            &lt;CRollbackObj/&gt;&#10;            &lt;FBackupPath/&gt;&#10;            &lt;FDeleteBefore&gt;0&lt;/FDeleteBefore&gt;&#10;            &lt;FInclSubDirs&gt;0&lt;/FInclSubDirs&gt;&#10;        &lt;/ROLLBACK&gt;&#10;        &lt;PRE_SCRIPT mode=&quot;1&quot; replacementmode=&quot;1&quot; state=&quot;1&quot;&gt;&#10;            &lt;PSCRI/&gt;&#10;        &lt;/PRE_SCRIPT&gt;&#10;        &lt;SCRIPT mode=&quot;1&quot; state=&quot;1&quot;&gt;&#10;            &lt;MSCRI&gt;&#10;                &lt;![CDATA[ @echo off Echo Hello world! ]]&gt;&#10;            &lt;/MSCRI&gt;&#10;        &lt;/SCRIPT&gt;&#10;        &lt;OUTPUTSCAN state=&quot;1&quot;&gt;&#10;            &lt;Inherit&gt;N&lt;/Inherit&gt;&#10;            &lt;filterobjects/&gt;&#10;            &lt;HostFsc/&gt;&#10;            &lt;LoginFsc/&gt;&#10;        &lt;/OUTPUTSCAN&gt;&#10;        &lt;POST_SCRIPT mode=&quot;1&quot; replacementmode=&quot;1&quot; state=&quot;1&quot;&gt;&#10;            &lt;OSCRI/&gt;&#10;        &lt;/POST_SCRIPT&gt;&#10;        &lt;DOCU_Docu state=&quot;1&quot; type=&quot;text&quot;&gt;&#10;            &lt;DOC/&gt;&#10;        &lt;/DOCU_Docu&gt;&#10;    &lt;/JOBS_WINDOWS&gt;&#10;&lt;/uc-export&gt;"/>
+</Parameters>
+</XML>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</VARA>
+</uc-export>
